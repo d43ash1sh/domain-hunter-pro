@@ -1,0 +1,15 @@
+# System Files
+.DS_Store
+Thumbs.db
+*.swp
+*.tmp
+*~
+
+# Local development logs / outputs
+*.log
+output.txt
+
+# Node / IDE files (if any)
+.vscode/
+.idea/
+node_modules/

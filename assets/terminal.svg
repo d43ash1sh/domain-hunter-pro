@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 480" width="720" height="480">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&amp;display=swap');
+      .terminal-header-text {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+        font-size: 13px;
+        fill: #94a3b8;
+        font-weight: 500;
+      }
+      .term-code {
+        font-family: 'Fira Code', monospace;
+        font-size: 13px;
+        fill: #f1f5f9;
+        line-height: 1.5;
+      }
+      .green-text { fill: #22c55e; font-weight: bold; }
+      .red-text { fill: #ef4444; font-weight: bold; }
+      .cyan-text { fill: #06b6d4; }
+      .yellow-text { fill: #eab308; }
+      .dim-text { fill: #64748b; }
+      .bold-white { fill: #ffffff; font-weight: bold; }
+    </style>
+    <filter id="windowShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.6" />
+    </filter>
+  </defs>
+
+  <!-- Dark outer background -->
+  <rect width="100%" height="100%" fill="#030712" rx="16" />
+
+  <!-- Terminal Window Container -->
+  <g transform="translate(30, 30)" filter="url(#windowShadow)">
+    <!-- Terminal Background -->
+    <rect width="660" height="420" rx="12" fill="#090d16" stroke="#1e293b" stroke-width="1.5" />
+    
+    <!-- Terminal Titlebar -->
+    <path d="M0,12 A12,12 0 0,1 12,0 L648,0 A12,12 0 0,1 660,12 L660,35 L0,35 Z" fill="#0f172a" stroke="#1e293b" stroke-width="1" />
+    <line x1="0" y1="35" x2="660" y2="35" stroke="#1e293b" stroke-width="1" />
+
+    <!-- Window Control Buttons (macOS Style) -->
+    <circle cx="18" cy="17" r="6" fill="#ef4444" />
+    <circle cx="38" cy="17" r="6" fill="#eab308" />
+    <circle cx="58" cy="17" r="6" fill="#22c55e" />
+
+    <!-- Window Title -->
+    <text x="330" y="22" text-anchor="middle" class="terminal-header-text">bash — domain-hunter-pro.sh</text>
+
+    <!-- Terminal Content Area -->
+    <g transform="translate(20, 60)">
+      <!-- Line-by-line terminal output simulation -->
+      
+      <!-- Simulated run command -->
+      <text x="0" y="0" class="term-code"><tspan class="cyan-text">user@localhost</tspan>:<tspan class="dim-text">~/domain-hunter-pro</tspan>$ ./domain-hunter-pro.sh</text>
+
+      <!-- Banner Output -->
+      <text x="0" y="25" class="term-code dim-text">╔══════════════════════════════════════════════════════════════╗</text>
+      <text x="0" y="42" class="term-code"><tspan class="dim-text">║</tspan>                  <tspan class="bold-white">DOMAIN HUNTER PRO</tspan>                          <tspan class="dim-text">║</tspan></text>
+      <text x="0" y="59" class="term-code"><tspan class="dim-text">║</tspan>              <tspan class="cyan-text">RDAP + WHOIS Availability Check</tspan>                <tspan class="dim-text">║</tspan></text>
+      <text x="0" y="76" class="term-code dim-text">╠══════════════════════════════════════════════════════════════╣</text>
+      <text x="0" y="93" class="term-code"><tspan class="dim-text">║ GitHub   : https://github.com/d43ash1sh                     ║</tspan></text>
+      <text x="0" y="110" class="term-code"><tspan class="dim-text">║ Website  : https://d43ash1sh.github.io                      ║</tspan></text>
+      <text x="0" y="127" class="term-code"><tspan class="dim-text">╚══════════════════════════════════════════════════════════════╝</tspan></text>
+
+      <!-- Prompt and input -->
+      <text x="0" y="155" class="term-code">Enter brand/domain (without TLD): <tspan class="yellow-text">cryptofuzz</tspan></text>
+      
+      <!-- Checking domains header -->
+      <text x="0" y="185" class="term-code cyan-text">Checking domains...</text>
+
+      <!-- Status outputs -->
+      <text x="0" y="210" class="term-code"><tspan class="green-text">✔ cryptofuzz.com                   AVAILABLE (RDAP)</tspan></text>
+      <text x="0" y="230" class="term-code"><tspan class="red-text">✖ cryptofuzz.net                   REGISTERED (RDAP)</tspan></text>
+      <text x="0" y="250" class="term-code"><tspan class="green-text">✔ cryptofuzz.org                   AVAILABLE (RDAP)</tspan></text>
+      <text x="0" y="270" class="term-code"><tspan class="green-text">✔ cryptofuzz.io                    AVAILABLE (RDAP)</tspan></text>
+      <text x="0" y="290" class="term-code"><tspan class="red-text">✖ cryptofuzz.dev                   REGISTERED (RDAP)</tspan></text>
+      <text x="0" y="310" class="term-code"><tspan class="red-text">✖ cryptofuzz.ai                    REGISTERED (WHOIS)</tspan></text>
+      <text x="0" y="330" class="term-code"><tspan class="green-text">✔ cryptofuzz.cloud                 AVAILABLE (WHOIS)</tspan></text>
+
+      <!-- Done output -->
+      <text x="0" y="360" class="term-code cyan-text">Done.</text>
+      
+      <!-- Done prompt -->
+      <text x="0" y="385" class="term-code"><tspan class="cyan-text">user@localhost</tspan>:<tspan class="dim-text">~/domain-hunter-pro</tspan>$ <tspan class="bold-white">█</tspan></text>
+    </g>
+  </g>
+</svg>

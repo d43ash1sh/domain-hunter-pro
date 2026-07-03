@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="neonGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe" />   <!-- Neon Cyan -->
+      <stop offset="50%" stop-color="#9b51e0" />  <!-- Purple -->
+      <stop offset="100%" stop-color="#050b1a" /> <!-- Dark Space -->
+    </linearGradient>
+    <linearGradient id="cyanGrad" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00f2fe" />
+      <stop offset="100%" stop-color="#7f00ff" />
+    </linearGradient>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#0e1726" />
+      <stop offset="100%" stop-color="#030712" />
+    </radialGradient>
+    <!-- Glow Filters -->
+    <filter id="cyanGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="purpleGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Dark Background -->
+  <rect width="100%" height="100%" fill="url(#bgGrad)" rx="24" />
+
+  <!-- Background Decorative Grid -->
+  <g stroke="#1e293b" stroke-width="1" opacity="0.3">
+    <line x1="0" y1="128" x2="512" y2="128" />
+    <line x1="0" y1="256" x2="512" y2="256" />
+    <line x1="0" y1="384" x2="512" y2="384" />
+    <line x1="128" y1="0" x2="128" y2="512" />
+    <line x1="256" y1="0" x2="256" y2="512" />
+    <line x1="384" y1="0" x2="384" y2="512" />
+  </g>
+
+  <!-- Outer Ring (Radar Scope) -->
+  <circle cx="256" cy="256" r="190" fill="none" stroke="url(#cyanGrad)" stroke-width="4" filter="url(#cyanGlow)" />
+  <circle cx="256" cy="256" r="160" fill="none" stroke="#1e293b" stroke-width="2" />
+  <circle cx="256" cy="256" r="120" fill="none" stroke="url(#cyanGrad)" stroke-width="1" opacity="0.4" />
+  
+  <!-- Radar Crosshairs -->
+  <line x1="256" y1="66" x2="256" y2="446" stroke="url(#cyanGrad)" stroke-width="2" opacity="0.5" stroke-dasharray="8 8" />
+  <line x1="66" y1="256" x2="446" y2="256" stroke="url(#cyanGrad)" stroke-width="2" opacity="0.5" stroke-dasharray="8 8" />
+
+  <!-- Radar Scanning Sweep -->
+  <path d="M256,256 L256,68 A188,188 0 0,1 389,123 Z" fill="url(#cyanGrad)" opacity="0.15" />
+  
+  <!-- Network / Target Nodes -->
+  <!-- Target Node 1 (Domain Found) -->
+  <circle cx="340" cy="180" r="12" fill="#00f2fe" filter="url(#cyanGlow)" />
+  <circle cx="340" cy="180" r="24" fill="none" stroke="#00f2fe" stroke-width="1" opacity="0.6">
+    <animate attributeName="r" values="12;28;12" dur="3s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Target Node 2 -->
+  <circle cx="160" cy="320" r="8" fill="#7f00ff" filter="url(#purpleGlow)" />
+  <circle cx="160" cy="320" r="16" fill="none" stroke="#7f00ff" stroke-width="1" opacity="0.4">
+    <animate attributeName="r" values="8;20;8" dur="4s" repeatCount="indefinite" />
+  </circle>
+
+  <!-- Target Node 3 -->
+  <circle cx="210" cy="160" r="6" fill="#00f2fe" opacity="0.8" />
+  
+  <!-- Target Node 4 -->
+  <circle cx="310" cy="340" r="7" fill="#7f00ff" opacity="0.7" />
+
+  <!-- Central Scope / Target Bracket -->
+  <g transform="translate(256,256)" stroke="#00f2fe" stroke-width="3" fill="none" filter="url(#cyanGlow)">
+    <!-- Top-Left Bracket -->
+    <path d="M-30,-15 L-30,-30 L-15,-30" />
+    <!-- Top-Right Bracket -->
+    <path d="M15,-30 L30,-30 L30,-15" />
+    <!-- Bottom-Left Bracket -->
+    <path d="M-30,15 L-30,30 L-15,30" />
+    <!-- Bottom-Right Bracket -->
+    <path d="M15,30 L30,30 L30,15" />
+    <!-- Center Dot -->
+    <circle cx="0" cy="0" r="4" fill="#00f2fe" />
+  </g>
+
+  <!-- Glowing Outer Pulse -->
+  <rect x="10" y="10" width="492" height="492" rx="14" fill="none" stroke="#9b51e0" stroke-width="1.5" opacity="0.3" />
+</svg>
