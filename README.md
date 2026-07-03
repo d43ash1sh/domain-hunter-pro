@@ -29,7 +29,6 @@
   <img src="https://img.shields.io/badge/Open_Source-Yes-22c55e?style=for-the-badge" alt="Open Source"/>
   <img src="https://img.shields.io/badge/Maintained-Yes-00f2fe?style=for-the-badge" alt="Maintained"/>
   <img src="https://img.shields.io/github/repo-size/d43ash1sh/domain-hunter-pro?style=for-the-badge&amp;color=eab308" alt="Repo Size"/>
-  <img src="https://komarev.com/normal-visitor-counter/?username=d43ash1sh-domain-hunter-pro&amp;color=9b51e0&amp;style=for-the-badge" alt="Visitor Counter"/>
 </p>
 
 ---
@@ -69,10 +68,6 @@ Domain Hunter Pro solves this by running **entirely on your local machine** usin
 <p align="center">
   <img src="assets/domain-search.svg" alt="Domain Hunter Pro Network Mesh" width="100%"/>
 </p>
-
-> [!NOTE]
-> Add your custom terminal recorded GIF here:
-> `![Demo Session](assets/demo.gif)`
 
 ---
 
@@ -361,30 +356,3 @@ If you found this tool useful, consider supporting the project:
 <a href="https://www.buymeacoffee.com"><img src="https://img.shields.io/badge/Buy_Me_A_Coffee-Donate-yellow?style=for-the-badge&amp;logo=buy-me-a-coffee" alt="Buy Me A Coffee"/></a>
 <a href="https://github.com/sponsors"><img src="https://img.shields.io/badge/Sponsor_on_GitHub-Support-ff69b4?style=for-the-badge&amp;logo=github-sponsors" alt="GitHub Sponsor"/></a>
 
----
-
-## 📈 Repository Statistics
-
-### Star History
-<p align="center">
-  <a href="https://star-history.com/#d43ash1sh/domain-hunter-pro&amp;Date">
-    <img src="https://api.star-history.com/svg?repos=d43ash1sh/domain-hunter-pro&amp;type=Date" alt="Star History Chart" width="100%"/>
-  </a>
-</p>
-
-### Code Statistics &amp; Analytics
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=d43ash1sh&amp;show_icons=true&amp;theme=tokyonight" alt="GitHub Stats Cards" width="48%"/>
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=d43ash1sh&amp;layout=compact&amp;theme=tokyonight" alt="Top Languages Card" width="48%"/>
-</p>
-
-### Contribution Graph
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=d43ash1sh&amp;bg_color=090d16&amp;color=00f2fe&amp;line=9b51e0&amp;point=ffffff&amp;area=true&amp;hide_border=true" alt="Activity Graph" width="100%"/>
-</p>
-
----
-
-<p align="center">
-  Made with ❤️ in India by <strong>Debashish Bordoloi</strong>
-</p>
